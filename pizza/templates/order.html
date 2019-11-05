@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Nandia Garden</title>
-  </head>
-  <body></body>
-</html>
+{% extends 'base.html' %} {% block content %}
+
+<form>
+  <label for="topping1">Topping 1: </label>
+  <input id="topping1" type="text" name="topping1" />
+  <label for="topping2">Topping 2: </label>
+  <input id="topping2" type="text" name="topping2" />
+  <label for="size">Size: </label>
+  <select name="size" id="size"> 
+      <option value="small">small</option>
+      <option value="small">medium</option>
+      <option value="small">large</option>
+  </select>
+</form>
+{% endblock %}
