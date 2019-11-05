@@ -1,15 +1,8 @@
 {% extends 'base.html' %} {% block content %}
 
-<form>
-  <label for="topping1">Topping 1: </label>
-  <input id="topping1" type="text" name="topping1" />
-  <label for="topping2">Topping 2: </label>
-  <input id="topping2" type="text" name="topping2" />
-  <label for="size">Size: </label>
-  <select name="size" id="size"> 
-      <option value="small">small</option>
-      <option value="small">medium</option>
-      <option value="small">large</option>
-  </select>
+<form action="{% url 'order' %}" method="post">
+  {% csrf_token %}
+  {{ pizzaform }}
+  <input type="submit" value="Order Pizza" />
 </form>
 {% endblock %}
