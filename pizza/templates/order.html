@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block content %}
-
+<h2>{{ note }}</h2>
 <form action="{% url 'order' %}" method="post">
   {% csrf_token %}
   {{ pizzaform }}
